@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rolldice_app/styled_text.dart';
 
 class GradientContainer extends StatelessWidget {
   //adds a lot of logic to the custom class behind the scene
@@ -18,15 +19,7 @@ class GradientContainer extends StatelessWidget {
           end: Alignment.bottomRight,
         ),
       ),
-      child: const Center(
-        child: Text(
-          'Hello World!',
-          style: TextStyle(
-            color: Color.fromARGB(255, 255, 255, 255),
-            fontSize: 28,
-          ),
-        ),
-      ),
+      child: const Center(child: StyledText()),
     );
   }
 }
