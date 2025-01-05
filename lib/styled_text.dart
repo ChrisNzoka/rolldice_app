@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
 
 class StyledText extends StatelessWidget {
-  const StyledText({super.key});
+  // StyledText(String text, {super.key}): outputText = text; //String Text is added as an argument here. it's totally different from the variable below
+  const StyledText(this.text, {super.key});   //this a shortcut to the verbose commented out above
+
+  final String text; // variable created using string to show the kind of value it accepts.
+  //the above variable can still be written as "var text"
+  //"final" ensures the variable is not reset
 
   @override //overides a method expected by statelesswidget
   Widget build(context) {
     return Text(
-      'Hello World!',
-      style: TextStyle(
+      text, //instead of the text like 'Hello world', we'll add a variable as a placeholder
+      style: const TextStyle(
         color: Color.fromARGB(255, 158, 3, 3),
         fontSize: 28,
       ),
