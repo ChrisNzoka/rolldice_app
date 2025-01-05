@@ -13,7 +13,7 @@ class StyledText extends StatelessWidget {
     return Text(
       text, //instead of the text like 'Hello world', we'll add a variable as a placeholder
       style: const TextStyle(
-        color: Color.fromARGB(255, 158, 3, 3),
+        color: Color.fromARGB(255, 193, 245, 5),
         fontSize: 28,
       ),
     );

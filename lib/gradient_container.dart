@@ -12,7 +12,10 @@ var endAlignment = Alignment.bottomRight; // standard variable
 
 class GradientContainer extends StatelessWidget {
   //adds a lot of logic to the custom class behind the scene
-  const GradientContainer({super.key});
+  const GradientContainer(this.myGradientStart, this.myGradientend, {super.key});
+  final Color myGradientStart;
+  final Color myGradientend;
+  //Note, this means that two argument are required for this widget on the main.dart code
 
   @override //overides a method expected by statelesswidget
   Widget build(context) {
@@ -20,10 +23,7 @@ class GradientContainer extends StatelessWidget {
       decoration: BoxDecoration(
         //container holds the background decoration. Thus, we'll remove the background color argument from scaffold widget
         gradient: LinearGradient(
-            colors: [
-              Color.fromARGB(255, 52, 5, 65),
-              Color.fromARGB(255, 3, 49, 87),
-            ], //background color gradient
+            colors: [myGradientStart, myGradientend], //background color gradient
             begin: startAlignment,
             end: endAlignment),
       ),
@@ -33,3 +33,27 @@ class GradientContainer extends StatelessWidget {
     );
   }
 }
+
+// Below is the named argument alternative for setting up myGradient var above
+
+// class GradientContainer extends StatelessWidget {
+//   //adds a lot of logic to the custom class behind the scene
+//   const GradientContainer({super.key, required this.myGradient});
+//   final List<Color> myGradient;
+
+//   @override //overides a method expected by statelesswidget
+//   Widget build(context) {
+//     return Container(
+//       decoration: BoxDecoration(
+//         //container holds the background decoration. Thus, we'll remove the background color argument from scaffold widget
+//         gradient: LinearGradient(
+//             colors: myGradient, //background color gradient
+//             begin: startAlignment,
+//             end: endAlignment),
+//       ),
+//       child: const Center(
+//         child: StyledText("Yelloo PIIPUUU"),
+//       ),
+//     );
+//   }
+// }

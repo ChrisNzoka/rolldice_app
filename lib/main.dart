@@ -7,7 +7,10 @@ void main() {
     const MaterialApp(
       home: Scaffold(
         //for backround decoration
-        body: GradientContainer(),
+        body: GradientContainer(
+          Color.fromARGB(255, 158, 3, 3),
+          Color.fromARGB(255, 212, 89, 89)
+        ),
       ),
     ),
   );
