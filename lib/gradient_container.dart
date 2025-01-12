@@ -14,7 +14,7 @@ class GradientContainer extends StatelessWidget {
   //adds a lot of logic to the custom class behind the scene
   const GradientContainer(this.myGradientStart, this.myGradientend, {super.key});
   final Color myGradientStart;
-  final Color myGradientend;
+  final Color myGradientend;  
   //Note, this means that two argument are required for this widget on the main.dart code
 
   @override //overides a method expected by statelesswidget
