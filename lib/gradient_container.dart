@@ -12,9 +12,10 @@ var endAlignment = Alignment.bottomRight; // standard variable
 
 class GradientContainer extends StatelessWidget {
   //adds a lot of logic to the custom class behind the scene
-  const GradientContainer(this.myGradientStart, this.myGradientend, {super.key});
+  const GradientContainer(this.myGradientStart, this.myGradientend,
+      {super.key});
   final Color myGradientStart;
-  final Color myGradientend;  
+  final Color myGradientend;
   //Note, this means that two argument are required for this widget on the main.dart code
 
   @override //overides a method expected by statelesswidget
@@ -23,12 +24,15 @@ class GradientContainer extends StatelessWidget {
       decoration: BoxDecoration(
         //container holds the background decoration. Thus, we'll remove the background color argument from scaffold widget
         gradient: LinearGradient(
-            colors: [myGradientStart, myGradientend], //background color gradient
+            colors: [
+              myGradientStart,
+              myGradientend
+            ], //background color gradient
             begin: startAlignment,
             end: endAlignment),
       ),
-      child: const Center(
-        child: StyledText("Yelloo PIIPUUU"),
+      child: Center(
+        child: Image.asset('assets/images/dice-3.png', width: 200),
       ),
     );
   }
