@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:rolldice_app/styled_text.dart';
 
 var startAlignment = Alignment.topLeft; //standard variable
 var endAlignment = Alignment.bottomRight; // standard variable
@@ -18,6 +17,11 @@ class GradientContainer extends StatelessWidget {
   final Color myGradientend;
   //Note, this means that two argument are required for this widget on the main.dart code
 
+  // The rollDice function serves as the Textbutton onPressed function
+  void rollDice() {
+    //define function here
+  }
+
   @override //overides a method expected by statelesswidget
   Widget build(context) {
     return Container(
@@ -32,7 +36,21 @@ class GradientContainer extends StatelessWidget {
             end: endAlignment),
       ),
       child: Center(
-        child: Image.asset('assets/images/dice-3.png', width: 200),
+        child: Column(
+          mainAxisSize: MainAxisSize.min, //centers column content vertically
+          children: [
+            Image.asset('assets/images/dice-3.png', width: 200),
+            TextButton(
+              onPressed: rollDice,
+              style: TextButton.styleFrom(
+                padding:context,
+                foregroundColor: const Color.fromARGB(255, 255, 255, 255),
+                textStyle: TextStyle(fontSize: 28),
+              ),
+              child: const Text("Fuck Roll"),
+            )
+          ],
+        ),
       ),
     );
   }

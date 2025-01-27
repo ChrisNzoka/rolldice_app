@@ -8,8 +8,8 @@ void main() {
       home: Scaffold(
         //for backround decoration
         body: GradientContainer(
-          Color.fromARGB(255, 158, 3, 3),
-          Color.fromARGB(255, 212, 89, 89)
+          Color.fromARGB(255, 81, 3, 3),
+          Color.fromARGB(255, 107, 19, 19)
         ),
       ),
     ),
