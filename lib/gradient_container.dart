@@ -12,18 +12,10 @@ var endAlignment = Alignment.bottomRight; // standard variable
 
 class GradientContainer extends StatelessWidget {
   //adds a lot of logic to the custom class behind the scene
-  GradientContainer(this.myGradientStart, this.myGradientend, {super.key});
+  const GradientContainer(this.myGradientStart, this.myGradientend, {super.key});
   final Color myGradientStart;
   final Color myGradientend;
   //Note, this means that two argument are required for this widget on the main.dart code
-  var diceRollImage = 'assets/images/dice-3.png';
-  // The rollDice function serves as the Textbutton onPressed function
-  void rollDice() {
-    //define function here
-    diceRollImage = 'assets/images/dice-2.png';
-    print('dice rolled...');
-    //the content of this function is how to NOT build interactive widget
-  }
 
   @override //overides a method expected by statelesswidget
   Widget build(context) {
@@ -39,7 +31,7 @@ class GradientContainer extends StatelessWidget {
             end: endAlignment),
       ),
       child: Center(
-        child: 
+        child: DiceRoller(),
       ),
     );
   }
