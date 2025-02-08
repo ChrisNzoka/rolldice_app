@@ -12,7 +12,6 @@ class DiceRoller extends StatefulWidget {
 class _DiceRollerState extends State<DiceRoller> {
   var activeDiceImage = 'assets/images/dice-3.png';
   // The rollDice function serves as the Textbutton onPressed function
-  @override
   void rollDice() {
     setState(
       () {
