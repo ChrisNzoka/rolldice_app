@@ -33,7 +33,7 @@ class _DiceRollerState extends State<DiceRoller> {
       mainAxisSize: MainAxisSize.min, //centers column content vertically
       children: [
         Image.asset(
-          'assets/image/dice-$currentDiceRoll.png',
+          'assets/images/dice-$currentDiceRoll.png',
           width: 200,
         ),
         //SizedBox(height: 20,) alternative to adding padding within the text widget
