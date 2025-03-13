@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:rolldice_app/styled_text.dart';
 
 final randomizer = Random();
 
@@ -48,7 +49,7 @@ class _DiceRollerState extends State<DiceRoller> {
               fontSize: 28,
             ),
           ),
-          child: const Text("Just Roll"),
+          child: const StyledText("Roll Dice"),
         )
       ],
     );
